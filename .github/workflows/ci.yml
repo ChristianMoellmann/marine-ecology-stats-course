@@ -1,4 +1,4 @@
-name: build-and-test
+name: build
 
 on:
   push:
@@ -9,35 +9,37 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: r-lib/actions/setup-r@v2
         with:
           r-version: '4.3.2'
-      - name: Install system deps
-        run: sudo apt-get update && sudo apt-get install -y libcurl4-openssl-dev libxml2-dev libssl-dev
-      - name: Install Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+
+      - uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: 'latest'
-      - name: Install renv & restore
+
+      # Install needed R packages (keeps it simple for now)
+      - name: Install R packages
         run: |
-          R -e "install.packages('renv', repos='https://cloud.r-project.org')"
-          R -e "renv::init(bare=TRUE); renv::restore()"
-      - name: Render book
-        run: quarto render book/
-      - name: Render slides
+          R -e "install.packages(c('tidyverse','lme4','glmmTMB','mgcv','vegan','DHARMa','performance','emmeans','MASS','broom','factoextra','FactoMineR'), repos='https://cloud.r-project.org')"
+
+      # Render only HTML (no LaTeX)
+      - name: Render book (HTML only)
+        run: quarto render book/ --to html
+
+      - name: Render slides (HTML revealjs)
         run: |
           for d in slides/*; do
             if [ -d "$d" ]; then
-              quarto render "$d"
+              quarto render "$d" --to revealjs
             fi
           done
-      - name: Knit assignments (solutions only as smoke tests)
-        run: |
-          R -e "print('Knitting assignment solutions…')"
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: site
           path: |
             book/_book/**
-            slides/**/**/*.pptx
+            slides/**/**.html
+        if-no-files-found: ignore
