@@ -1,0 +1,21 @@
+---
+title: "Week2 Glm Counts"
+---
+
+
+## Poisson vs Negative Binomial; Offsets; Zero Inflation
+- Use **offset** for exposure (e.g., effort, area, time).
+- Overdispersion suggests NB; excess zeros may suggest Zero-Inflated models.
+
+```{r}
+library(MASS)
+set.seed(1)
+exposure <- runif(200, 0.5, 2.0)
+x <- rnorm(200)
+mu <- exp(0.3 + 0.6*x + log(exposure))
+y <- rpois(200, mu)
+mPois <- glm(y ~ x + offset(log(exposure)), family=poisson())
+mNB   <- MASS::glm.nb(y ~ x + offset(log(exposure)))
+AIC(mPois, mNB)
+```
+

@@ -1,0 +1,15 @@
+Week,Topic,Learning Objectives,Readings,Slides,Assignment,Assessment
+0,R refresher,Data wrangling; ggplot; AI-with-R mini,Book ch0; R4DS,Slides wk0,Practice,Quiz
+1,Intro GLM,When/why; link; simple fits,Book ch1,Slides wk1,Assignment 1 (GLM),Quiz
+2,GLM deep dive,Offsets; overdispersion; ZI vs NB,Book ch2,Slides wk2,(folded into A1),Quiz
+3,GLM diagnostics,Residuals; reporting,Book ch3,Slides wk3,Assignment 1 (GLM),Peer review
+4,GLMM,Random effects; ICC,Book ch4,Slides wk4,Assignment 2 (GLMM),Quiz
+5,GLMM advanced,Slopes; OLRE; ZI GLMM,Book ch5,Slides wk5,Practice clinic,Quiz
+6,GAM,EDF; basis; concurvity,Book ch6,Slides wk6,Assignment 3 (GAM),Quiz
+7,GAMM,GAM + RE; correlation,Book ch7,Slides wk7,Assignment 4 (GAMM),Quiz
+8,Cluster,Distance; linkage; k,Book ch8,Slides wk8,Assignment 5 (Cluster),Quiz
+9,PCA,Scaling; loadings/scores,Book ch9,Slides wk9,Assignment 6 (PCA),Quiz
+10,RDA,Constrained ordination; tests,Book ch10,Slides wk10,Assignment 7 (RDA),Quiz
+11,Integration,Method selection; reproducibility,Book ch11,Slides wk11,Proposal,Feedback
+12,Capstone,Project work,,,(Capstone),-
+13,Capstone,Presentations & AI reflection,,,Presentation,Reflection

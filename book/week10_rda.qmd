@@ -1,0 +1,15 @@
+---
+title: "Week10 Rda"
+---
+
+
+## Redundancy Analysis (RDA)
+- Constrained ordination: species ~ environment.
+- Permutation tests for significance; partial RDA with Condition().
+
+```{r}
+# library(vegan)
+# r <- vegan::rda(species ~ sal + temp + depth, data=env)
+# anova(r); plot(r)
+```
+

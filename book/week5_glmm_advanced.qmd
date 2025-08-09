@@ -1,0 +1,16 @@
+---
+title: "Week5 Glmm Advanced"
+---
+
+
+## Random Slopes, OLRE, Zero-Inflated GLMMs
+- Random slopes allow group-specific trends.
+- Observation-level RE can handle overdispersion.
+- Zero-inflation models separate structural zeros.
+
+```{r}
+# library(glmmTMB)
+# fit_zi <- glmmTMB(count ~ depth + (1|site), ziformula=~1, family=poisson, data=df)
+# DHARMa::simulateResiduals(fit_zi) |> plot()
+```
+

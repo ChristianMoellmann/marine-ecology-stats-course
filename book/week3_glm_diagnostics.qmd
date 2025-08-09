@@ -1,0 +1,16 @@
+---
+title: "Week3 Glm Diagnostics"
+---
+
+
+## Diagnostics & Reporting
+- Use simulation-based residuals (DHARMa) to check dispersion and zero-inflation.
+- Report effect sizes on interpretable scales (odds or rate ratios).
+
+```{r}
+# Pseudocode; ensure DHARMa installed in env
+# library(DHARMa)
+# res <- simulateResiduals(mNB)
+# plot(res)
+```
+

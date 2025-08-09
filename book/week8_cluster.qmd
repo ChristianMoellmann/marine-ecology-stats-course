@@ -1,0 +1,17 @@
+---
+title: "Week8 Cluster"
+---
+
+
+## Cluster Analysis
+- Distances: Euclidean for continuous env vars; Bray-Curtis for community composition.
+- Methods: k-means, PAM, hierarchical (Ward, complete, average).
+- Choosing k: silhouette, gap statistic.
+
+```{r}
+# library(vegan); library(cluster)
+# d <- vegan::vegdist(comm_mat, method="bray")
+# hc <- hclust(d, method="average")
+# plot(hc)
+```
+

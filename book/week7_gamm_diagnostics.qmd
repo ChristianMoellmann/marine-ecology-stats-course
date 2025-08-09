@@ -1,0 +1,15 @@
+---
+title: "Week7 Gamm Diagnostics"
+---
+
+
+## GAM Diagnostics & GAMM Intro
+- Check residuals, k-index, concurvity.
+- GAMM adds random effects / correlation structures.
+
+```{r}
+# library(mgcv)
+# gg <- gamm(count ~ s(temp), random = list(site=~1), data=df, family=poisson)
+# gam.check(gg$gam)
+```
+

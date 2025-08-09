@@ -1,0 +1,27 @@
+---
+title: "Intro to GLM"
+format:
+  revealjs:
+    incremental: true
+    slide-number: true
+  pptx:
+    keep-md: true
+---
+
+# Motivation
+Why this method matters in marine ecology (short case).
+
+# Concept
+Key ideas in plain language; minimal math.
+
+# Assumptions & Diagnostics
+Checklist; what to plot; common red flags.
+
+# Workflow (R)
+- Fit model
+- Check diagnostics
+- Interpret
+- Report
+
+# Case Study
+Brief example; 2–3 takeaways.

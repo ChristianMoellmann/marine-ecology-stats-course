@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Marine Ecology Statistics Course (AI-enabled)"
+message: "If you use this course, please cite it as below."
+authors:
+  - family-names: "Course Team"
+    given-names: "Marine Ecology"
+date-released: "2025-08-09"
+version: "1.0.0"
+license: "CC-BY-4.0"

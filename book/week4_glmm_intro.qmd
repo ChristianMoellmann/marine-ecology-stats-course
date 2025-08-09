@@ -1,0 +1,15 @@
+---
+title: "Week4 Glmm Intro"
+---
+
+
+## Random Effects (GLMM)
+- Random intercepts account for group-level variation (site, year).
+- ICC quantifies proportion of variance at group level.
+
+```{r}
+# library(lme4)
+# fit <- lme4::glmer(count ~ depth + (1|site), family=poisson, data=df)
+# summary(fit)
+```
+

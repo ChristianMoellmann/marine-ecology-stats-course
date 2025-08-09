@@ -1,0 +1,22 @@
+---
+title: "Week0 Refresher"
+---
+
+
+## Goals
+- Refresh tidyverse data wrangling, ggplot2, writing small functions, set.seed, Quarto basics.
+- Mini-module: **AI-with-R** (prompting patterns; verifying outputs with diagnostics).
+
+> **AI Assist:** Ask an AI to *explain an error message* and propose a minimal reproducible example. **Verify** by running the code and checking outputs.
+
+```{{r}}
+# Example: load tidyverse and inspect a dataset
+library(tidyverse)
+set.seed(42)
+df <- tibble(site = rep(letters[1:10], each=20),
+             depth = runif(200, 5, 80),
+             temp = rnorm(200, 12, 2),
+             count = rpois(200, lambda = exp(0.02*(20-depth))))
+glimpse(df)
+```
+

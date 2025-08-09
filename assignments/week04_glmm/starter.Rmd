@@ -1,0 +1,6 @@
+# Starter for Assignment 2 — GLMM (Random Effects)
+
+```{r}
+library(tidyverse)
+# add required packages per method
+```

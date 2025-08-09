@@ -1,0 +1,15 @@
+---
+title: "Week9 Pca"
+---
+
+
+## PCA
+- Variance-maximizing axes; consider scaling.
+- Interpret loadings (variables) and scores (samples).
+
+```{r}
+# X <- scale(env_df) # if needed
+# p <- prcomp(X, center=TRUE, scale.=TRUE)
+# plot(p, type="l"); biplot(p)
+```
+

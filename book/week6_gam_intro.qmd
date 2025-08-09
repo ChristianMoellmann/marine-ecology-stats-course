@@ -1,0 +1,15 @@
+---
+title: "Week6 Gam Intro"
+---
+
+
+## GAMs (mgcv)
+- Flexible smooths model non-linear effects.
+- EDF indicates wiggliness; check basis size (k).
+
+```{r}
+# library(mgcv)
+# g <- gam(count ~ s(temp, k=10), family=poisson, data=df)
+# summary(g); plot(g, residuals=TRUE)
+```
+

@@ -1,0 +1,2 @@
+date,tool,version,prompt_summary,ai_response_summary,verification_and_outcome
+2025-08-09,ChatGPT,GPT-5,How to interpret GAM EDF?,Explained EDF as wiggliness; EDF>1 implies nonlinearity,Verified with mgcv docs; matched summary(gam_model); used in report

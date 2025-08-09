@@ -1,0 +1,12 @@
+---
+title: "Statistics for Marine Ecology: A Concept-First Guide"
+format: html
+---
+
+Welcome! This script-book is **math-light and interpretation-first**. Each chapter includes:
+- When & why to use the method
+- Assumptions & diagnostics
+- Ecological interpretation
+- Reporting templates
+- AI Assist sidebars
+- Short worked examples in R

@@ -1,0 +1,25 @@
+---
+title: "Week1 Glm Intro"
+---
+
+
+## When & Why GLM?
+Use GLMs for non-normal responses (binary, counts) with appropriate links.
+
+### Assumptions
+- Correct distribution & link
+- Independent residuals (for simple GLMs)
+- No severe collinearity among predictors
+
+> **AI Assist:** Ask for a *plain-language explanation* of the logit link; then *verify* by plotting the inverse-logit curve.
+
+```{r}
+# Logistic GLM example
+library(stats)
+df <- data.frame(temp = seq(6, 20, length.out=100))
+beta0 <- -5; beta1 <- 0.4
+df$p <- plogis(beta0 + beta1*df$temp)
+glm_bin <- glm(I(rbinom(100, 1, df$p)) ~ temp, family = binomial(), data = df)
+summary(glm_bin)
+```
+

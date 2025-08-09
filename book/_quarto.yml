@@ -1,0 +1,36 @@
+project:
+  type: book
+
+book:
+  title: "Statistics for Marine Ecology: A Concept-First Guide"
+  author: "Course Team"
+  date: today
+  chapters:
+    - index.qmd
+    - week0_refresher.qmd
+    - week1_glm_intro.qmd
+    - week2_glm_counts.qmd
+    - week3_glm_diagnostics.qmd
+    - week4_glmm_intro.qmd
+    - week5_glmm_advanced.qmd
+    - week6_gam_intro.qmd
+    - week7_gamm_diagnostics.qmd
+    - week8_cluster.qmd
+    - week9_pca.qmd
+    - week10_rda.qmd
+    - week11_integration.qmd
+    - week12_capstone.qmd
+    - week13_presentations.qmd
+
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    documentclass: scrreprt
+  docx: default
+
+execute:
+  echo: true
+  warning: false
+  message: false
