@@ -15,9 +15,12 @@ jobs:
           r-version: '4.3.2'
           use-public-rspm: true
 
-      - uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          version: 'latest'
+      # Install Quarto directly (avoids the vlatest 404)
+      - name: Install Quarto
+        run: |
+          wget -q https://quarto.org/download/latest/quarto-linux-amd64.deb
+          sudo dpkg -i quarto-linux-amd64.deb
+          quarto --version
 
       - name: Install minimal R packages
         run: |
